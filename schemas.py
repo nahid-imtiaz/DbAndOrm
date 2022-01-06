@@ -47,3 +47,14 @@ class PostRead(_PostBase):
 
     class Config:
         orm_mode = True
+
+
+class Item(_pydantic.BaseModel):  # serializer
+    id: int
+    name: str
+    description: str
+    price: int
+    on_offer: bool
+
+    class Config:
+        orm_mode = True
